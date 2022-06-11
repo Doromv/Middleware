@@ -22,6 +22,9 @@ public class Task02 {
 
         Channel channel = RabbitMqUtils.getChannel();
 
+        //开启发布确认
+        channel.confirmSelect();
+
         channel.queueDeclare(TASK_QUEUE_NAME,true,false,false,null);
 
         Scanner scanner = new Scanner(System.in);

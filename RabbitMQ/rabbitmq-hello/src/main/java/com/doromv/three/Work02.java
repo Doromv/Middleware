@@ -19,6 +19,13 @@ public class Work02 {
 
         System.out.println("C1等待接收消息，处理时间较短");
 
+        /**
+         * prefetchCount=1代表开启不公平分发
+         * prefetchCount=2代表预取值等于2
+         */
+//        channel.basicQos(1);
+
+        channel.basicQos(2);
         channel.basicConsume(TASK_QUEUE_NAME, false, (consumeTag,message)->{
             String str = new String(message.getBody(),"UTF-8");
             SleepUtils.sleep(1);
