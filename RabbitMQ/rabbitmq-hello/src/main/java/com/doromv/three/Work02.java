@@ -25,7 +25,7 @@ public class Work02 {
          */
 //        channel.basicQos(1);
 
-        channel.basicQos(2);
+        channel.basicQos(2 );
         channel.basicConsume(TASK_QUEUE_NAME, false, (consumeTag,message)->{
             String str = new String(message.getBody(),"UTF-8");
             SleepUtils.sleep(1);
