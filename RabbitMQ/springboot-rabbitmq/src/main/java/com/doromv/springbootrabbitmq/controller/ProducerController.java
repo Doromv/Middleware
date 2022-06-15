@@ -39,3 +39,4 @@ public class ProducerController {
         log.info("发送消息，内容为：{}",message);
     }
 }
+

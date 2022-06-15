@@ -5,7 +5,6 @@ import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.util.concurrent.TimeoutException;
 
 /**
