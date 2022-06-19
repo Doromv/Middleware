@@ -2,10 +2,13 @@ package com.doromv.provider.service.impl;
 
 import com.atguigu.gmall.bean.UserAddress;
 import com.atguigu.gmall.service.UserService;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Service
+@com.alibaba.dubbo.config.annotation.Service(version = "2.0.0")
 public class UserServiceImpl2 implements UserService {
 
 	@Override
